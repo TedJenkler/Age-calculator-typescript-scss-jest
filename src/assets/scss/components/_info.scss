@@ -14,3 +14,17 @@
         }
     }
 }
+
+@include respond-to(xxl) {
+    .info {
+        padding-top: 2.96875rem;
+
+        p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 6.5rem;
+            height: 7.125rem;
+        }
+    }
+}

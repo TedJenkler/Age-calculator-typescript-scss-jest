@@ -18,7 +18,7 @@ function MonthInput({ month, setMonth }: MonthInputProps) {
             <input
                 onChange={handleMonth}
                 value={month}
-                placeholder="0"
+                placeholder="MM"
             />
         </div>
     );

@@ -33,7 +33,6 @@ html, body {
         font-size: 0.75rem;
         font-weight: 700;
         word-spacing: 0.25rem;
-        font-family: "Poppins", sans-serif;
         color: $grey;
     }
 
@@ -46,5 +45,29 @@ html, body {
         padding: 0.75rem 1rem;
         font-size: 1.25rem;
         font-weight: 700;
+        cursor: pointer;
+
+        &:focus {
+            border: 1px solid $purple;
+        }
+    }
+}
+
+@include respond-to(xxl) {
+    .input {
+        width: 10rem;
+        height: 6.3125rem;
+
+        label {
+            font-size: 0.875rem;
+        }
+
+        input {
+            width: 10rem;
+            height: 4.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 2rem;
+            word-spacing: 0.0625rem;
+        }
     }
 }

@@ -35,9 +35,9 @@ function Info({ now, selectedDate }: InfoProps) {
 
   return (
     <div className="info">
-      <p><span>{diff.year} </span>years</p>
-      <p><span>{diff.month} </span>months</p>
-      <p><span>{diff.day} </span>days</p>
+      <p><span>{diff.year ? diff.year : "--"} </span>years</p>
+      <p><span>{diff.month ? diff.month : "--"} </span>months</p>
+      <p><span>{diff.day ? diff.day : "--"} </span>days</p>
     </div>
   );
 }

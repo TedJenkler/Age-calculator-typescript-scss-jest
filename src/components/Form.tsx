@@ -21,6 +21,8 @@ function Form() {
     
       setNow(currentDate);
       setSelectedDate(newSelectedDate);
+    }else  {
+      alert("Fill all fields")
     }
   };
 

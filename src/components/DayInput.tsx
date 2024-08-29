@@ -61,7 +61,7 @@ function DayInput({ day, setDay, month, year }: DayInputProps) {
             <input
                 onChange={handleDay}
                 value={day}
-                placeholder="0"
+                placeholder="DD"
             />
         </div>
     );

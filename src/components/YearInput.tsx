@@ -19,7 +19,7 @@ function YearInput({ year, setYear }: YearInputProps) {
             <input
                 onChange={handleYear}
                 value={year}
-                placeholder="0"
+                placeholder="YYYY"
             />
         </div>
     );
