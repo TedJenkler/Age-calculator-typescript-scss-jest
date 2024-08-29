@@ -6,7 +6,7 @@ function MonthInput() {
     const handleMonth = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const numberValue = Number(value);
-        if (!isNaN(numberValue) && numberValue <= 12) {
+        if (!isNaN(numberValue) && numberValue <= 12 && numberValue >= 0) {
             setMonth(value);
         }
     };

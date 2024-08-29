@@ -6,7 +6,7 @@ function DayInput() {
     const handleDay = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const numberValue = Number(value);
-        if (!isNaN(numberValue) && numberValue <= 31) {
+        if (!isNaN(numberValue) && numberValue <= 31 && numberValue >= 0) {
             setDay(value);
         }
     };
