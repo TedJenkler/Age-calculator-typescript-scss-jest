@@ -48,7 +48,7 @@ function DayInput({ day, setDay, month, year }: DayInputProps) {
         const numberValue = Number(value);
         const lastDay = calcLastDayOfMonth(month, year);
         
-        if (!isNaN(numberValue) && numberValue >= 0 && numberValue <= lastDay) {
+        if (!isNaN(numberValue) && numberValue >= 0 && numberValue <= lastDay && value.trim() !== "") {
             setDay(value);
         } else if (numberValue > lastDay) {
             setDay(String(lastDay));

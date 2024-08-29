@@ -95,5 +95,5 @@ test('Rejects all non-numeric inputs', () => {
     fireEvent.change(input, { target: { value: char } });
   });
 
-  expect(mockSetDay).toHaveBeenCalledWith("");
+  expect(mockSetDay).toHaveBeenCalledTimes(0);
 });
