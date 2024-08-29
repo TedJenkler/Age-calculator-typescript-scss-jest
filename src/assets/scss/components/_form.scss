@@ -1,0 +1,33 @@
+form {
+    position: relative;
+    display: flex;
+    padding: 3rem 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 21.4375rem;
+    border-radius: 1.5rem 1.5rem 6.25rem 1.5rem;
+    background-color: white;
+
+    .inputs {
+        display: flex;
+        gap: 1rem;
+        padding: 0 0 3.96875rem 0;
+        border-bottom: 0.0625rem solid $line;
+    }
+}
+
+button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $purple;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+}
