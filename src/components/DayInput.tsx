@@ -5,19 +5,22 @@ function DayInput() {
 
     const handleDay = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        const numbervalue = Number(value);
-        if(!isNaN(numbervalue) && numbervalue <= 31) {
-            setDay(value);   
+        const numberValue = Number(value);
+        if (!isNaN(numberValue) && numberValue <= 31) {
+            setDay(value);
         }
     };
 
-  return (
-    <div className="input">
-      <label>DAY</label>
-      <input onChange={handleDay} value={day} placeholder="0">
-      </input>
-    </div>
-  )
+    return (
+        <div className="input">
+            <label>DAY</label>
+            <input
+                onChange={handleDay}
+                value={day}
+                placeholder="0"
+            />
+        </div>
+    );
 }
 
-export default DayInput
+export default DayInput;
