@@ -59,6 +59,7 @@ function DayInput({ day, setDay, month, year }: DayInputProps) {
         <div className="input">
             <label>DAY</label>
             <input
+                aria-label="day input"
                 onChange={handleDay}
                 value={day}
                 placeholder="DD"
