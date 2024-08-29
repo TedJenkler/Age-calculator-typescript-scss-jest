@@ -1,8 +1,9 @@
-import { useState } from "react";
+interface YearInputProps {
+    year: string,
+    setYear: (year: string) => void
+}
 
-function YearInput() {
-    const [year, setYear] = useState<string>('');
-
+function YearInput({ year, setYear }: YearInputProps) {
     const handleYear = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const numberValue = Number(value);

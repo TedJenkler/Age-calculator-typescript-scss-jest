@@ -1,8 +1,9 @@
-import { useState } from "react";
+interface MonthInputProps {
+    month: string,
+    setMonth: (month: string) => void
+}
 
-function MonthInput() {
-    const [month, setMonth] = useState<string>('');
-
+function MonthInput({ month, setMonth }: MonthInputProps) {
     const handleMonth = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         const numberValue = Number(value);
