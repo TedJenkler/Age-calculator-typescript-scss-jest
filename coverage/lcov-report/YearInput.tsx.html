@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for MonthInput.tsx</title>
+    <title>Code coverage report for YearInput.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> MonthInput.tsx</h1>
+        <h1><a href="index.html">All files</a> YearInput.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -90,13 +90,15 @@
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">90x</span>
 <span class="cline-any cline-yes">90x</span>
 <span class="cline-any cline-yes">90x</span>
 <span class="cline-any cline-yes">90x</span>
@@ -117,34 +119,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">interface MonthInputProps {
-    month: string,
-    setMonth: (month: string) =&gt; void
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">interface YearInputProps {
+    year: string,
+    setYear: (year: string) =&gt; void
 }
 &nbsp;
-function MonthInput({ month, setMonth }: MonthInputProps) {
-    const handleMonth = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+function YearInput({ year, setYear }: YearInputProps) {
+    const handleYear = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
         const value = e.target.value;
         const numberValue = Number(value);
-        if (!isNaN(numberValue) &amp;&amp; numberValue &lt;= 12 &amp;&amp; numberValue &gt;= 0 &amp;&amp; value.trim() !== "") {
-            setMonth(value);
+        const currentYear = new Date().getFullYear();
+        if (!isNaN(numberValue) &amp;&amp; numberValue &lt;= currentYear &amp;&amp; numberValue &gt;= 0 &amp;&amp; value.trim() !== "") {
+            setYear(value);
         }
     };
 &nbsp;
     return (
         &lt;div className="input"&gt;
-            &lt;label&gt;Month&lt;/label&gt;
+            &lt;label&gt;Year&lt;/label&gt;
             &lt;input
-                aria-label="month input"
-                onChange={handleMonth}
-                value={month}
-                placeholder="MM"
+                aria-label="year input"
+                onChange={handleYear}
+                value={year}
+                placeholder="YYYY"
             /&gt;
         &lt;/div&gt;
     );
 }
 &nbsp;
-export default MonthInput;</pre></td></tr></table></pre>
+export default YearInput;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

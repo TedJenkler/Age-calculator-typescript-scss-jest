@@ -13,7 +13,7 @@ function Form() {
   const [now, setNow] = useState<Date>(new Date());
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (day !== '' && day !== '0' && month !== '' && month !== '0' && year !== '' && year !== '0') {
       const currentDate = new Date();
@@ -33,7 +33,7 @@ function Form() {
         <MonthInput month={month} setMonth={setMonth} />
         <YearInput year={year} setYear={setYear} />
       </div>
-      <button type="submit" className="button">
+      <button aria-label="submit btn" type="submit" className="button">
         <img src={arrow} alt="arrow" />
       </button>
       <Info now={now} selectedDate={selectedDate} />
